@@ -14,10 +14,11 @@ class Solution {
 
     public void rotate(int[] nums, int k) {
         int n = nums.length;
-
-        if(n==0 || k ==0) System.out.println(Arrays.toString(nums));
-
-        k = k%n;
+        k%=nums.length;
+        
+        if(k<0){
+            k+=nums.length;
+        }
 
         reverse(nums , 0 , n-1);
 
