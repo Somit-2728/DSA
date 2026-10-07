@@ -1,8 +1,7 @@
 class Solution {
     public void reverseString(char[] s) {
         int left =0;
-        int right = s.length -1;
-
+        int right = s.length-1;
         while(left < right){
             char temp = s[left];
             s[left] = s[right];
@@ -11,9 +10,8 @@ class Solution {
             left++;
             right--;
         }
-
-        if(s.length <= 0){
-            System.out.println("Invalid string");
+        if(s.length < 1){
+            System.out.println("Empty string");
         }
     }
 }
